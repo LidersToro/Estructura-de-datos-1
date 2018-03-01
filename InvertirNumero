@@ -1,0 +1,27 @@
+//PROGRAMA 2
+//Dado un número entero N, hacer un programa para invertir el número en otra variable Z.  Ej. Si N= 456721, el número invertido es Z=127654.
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+
+void main()
+{int num,z=0,p,c;
+   do
+   {
+	   cout<<"Ingresar numero, (mayor a 3 digitos): "<<endl;
+       cin>>num;
+   }
+   while(num<100);
+
+   while(num>0)
+   {
+	   p=num%10;
+       z=z*10+p;
+       c=num/10;
+       num=c;
+   }
+   cout<<"El numero invertido es: "<<z<<endl;
+   _getch();
+}
