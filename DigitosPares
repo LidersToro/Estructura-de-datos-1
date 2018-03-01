@@ -1,0 +1,25 @@
+//PROGRAMA 3
+// Hacer un programa para contar los dígitos pares que tiene un número N.  Ej. Si N= 5678312,  este tiene 3 dígitos pares (6, 8, 2).
+
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+using namespace std;
+
+void main()
+{int num,par=0,p,c;
+   cout<<"Ingresar numero: "<<endl;
+   cin>>num;
+   while(num>0)
+   {
+	   p=num%10;
+       if(p%2==0)
+       {
+		   par = par + 1;
+       }
+       c=num/10;
+       num=c;
+   }
+   cout <<"El numero ingresado tiene "<<par<< " numeros pares"<<endl;
+   _getch();
+}
